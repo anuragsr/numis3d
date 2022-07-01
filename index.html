@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Numis Animation Demo</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+	<link rel="stylesheet" type="text/css" href="css/section3bg.css" />		
+</head>
+<body>
+	<div class="curtain"></div>
+	<div id="fullpage">
+		<div class="section active" id="section0">
+			<div class="header">
+				<svg class="header-svg" width="150" height="150">				
+				  	<circle stroke="#fff" fill="none" stroke-width="5" cx="78" cy="75" r="50"/>
+				  	<path stroke="#fff" fill="none" stroke-width="5" 
+				  		d= "M70 25 
+				  			L70 85 
+				  			L50 100 
+				  			L50 50
+				  			L105 100
+				  			L105 50
+				  			L85 65
+				  			L85 125"/>
+				</svg>
+				<div class="nav">
+					<a class="txtAnim" href="#">FEATURES</a>
+					<a class="txtAnim" href="#">WHITE PAPER</a>
+					<a class="txtAnim" href="#">ABOUT</a>
+					<a class="txtAnim" href="#">SIGN UP</a>
+				</div>
+			</div>
+			<div class="svg-contain">
+				<svg id="logo-svg" class="svgAnim" width="150" height="150">
+					<defs>
+						<filter id="sofGlow" height="300%" width="300%" x="-50%" y="-50%">
+							<!-- Thicken out the original shape -->
+							<feMorphology operator="dilate" radius="2" in="SourceAlpha" result="thicken" />
+
+							<!-- Use a gaussian blur to create the soft blurriness of the glow -->
+							<feGaussianBlur in="thicken" stdDeviation="5" result="blurred" />
+
+							<!-- Change the colour -->
+							<feFlood flood-color="rgb(0,186,255)" result="glowColor" />
+
+							<!-- Color in the glows -->
+							<feComposite in="glowColor" in2="blurred" operator="in" result="softGlow_colored" />
+
+							<!-- Layer the effects together -->
+							<feMerge>
+								<feMergeNode in="softGlow_colored"/>
+								<feMergeNode in="SourceGraphic"/>
+							</feMerge>
+
+						</filter>
+					</defs>
+				  	<circle filter="url(#sofGlow)" id="logo-circ" cx="78" cy="75" r="50"/>
+				  	<path filter="url(#sofGlow)" 
+				  		id="logo-line" 
+				  		d= "M70 25 
+				  			L70 85 
+				  			L50 100 
+				  			L50 50
+				  			L105 100
+				  			L105 50
+				  			L85 65
+				  			L85 125"/>
+				</svg>
+			</div>			
+			<div class="main-content fp-table">
+				<div class="fp-tableCell">
+					<div class="wrap">
+						<div class="left-box">
+							<h2 class="txtAnim" id="scrTxt1">
+								The Fastest Real-Time<br/> 
+								Crypto Intelligence<br/> 
+								Platform
+							</h2><br/>
+							<h3 class="txtAnim" id="scrTxt2">
+								Crowdsourced and professionally curated research, analysis, 
+								trading signals, trading algorithms, and market moving news 
+								to give cryptocurrency traders the real-time market intelligence 
+								needed to gain an edge.
+							</h3>
+							<button class="txtAnim glow-btn" id="scrTxt3">Learn More</button>
+						</div>			
+						<div class="right-box txtAnim">
+							<div class="contact-box">
+								<div class="txtAnim">								
+									<h2>Sign Up!</h2><br/>
+									Exclusive Early Beta Access for Whitelist Members
+								</div>
+								<input class="txtAnim" type="text" placeholder="First Name">
+								<input class="txtAnim" type="text" placeholder="Last Name">
+								<input class="txtAnim" type="text" placeholder="Email">
+								<button class="txtAnim glow-btn">Create Account</button>
+							</div>
+						</div>			
+					</div>
+					<div class="ticker">
+					    <div class="ticker-contain">
+					    	<div class="tick-box">
+					    		BTC/GBP <span class="nt">-5.59%</span>
+					    		<br/><span class="wt">11,560</span> <span class="gt">GBP</span>
+					    		<br/><span class="t-foot gt">Volume: <span class="wt">773</span> BTC</span>
+					    	</div>
+					    	<div class="tick-box">
+					    		BTC/USD <span class="pt">+2.25%</span>
+					    		<br/><span class="wt">14,723</span> <span class="gt">USD</span>
+					    		<br/><span class="t-foot gt">Volume: <span class="wt">24,794</span> BTC</span>
+					    	</div>
+					    	<div class="tick-box">
+					    		ETH/BTC <span class="pt">+6.07%</span>
+					    		<br/><span class="wt">0.52</span> <span class="gt">BTC</span>
+					    		<br/><span class="t-foot gt">Volume: <span class="wt">67,765</span> ETH</span>
+					    	</div>
+					    	<div class="tick-box">
+					    		LTC/USD <span class="pt">+4.95%</span>
+					    		<br/><span class="wt">262.19</span> <span class="gt">USD</span>
+					    		<br/><span class="t-foot gt">Volume: <span class="wt">491,842</span> LTC</span>
+					    	</div>
+					    	<div class="tick-box">
+					    		BTC/EUR <span class="nt">-3.44%</span>
+					    		<br/><span class="wt">13,479.44</span> <span class="gt">EUR</span>
+					    		<br/><span class="t-foot gt">Volume: <span class="wt">4,111</span> BTC</span>
+					    	</div>
+					    	<div class="tick-box">
+					    		LTC/BTC <span class="pt">+2.25%</span>
+					    		<br/><span class="wt">0.02</span> <span class="gt">BTC</span>
+					    		<br/><span class="t-foot gt">Volume: <span class="wt">24,794</span> LTC</span>
+					    	</div>
+					    	<div class="tick-box">
+					    		ETH/USD <span class="nt">-2.49%</span>
+					    		<br/><span class="wt">642.33</span> <span class="gt">USD</span>
+					    		<br/><span class="t-foot gt">Volume: <span class="wt">12,873</span> ETH</span>
+					    	</div>
+					    	<div class="tick-box">
+					    		LTC/USD <span class="pt">+4.95%</span>
+					    		<br/><span class="wt">262.19</span> <span class="gt">USD</span>
+					    		<br/><span class="t-foot gt">Volume: <span class="wt">491,842</span> LTC</span>
+					    	</div>
+					    	<div class="tick-box">
+					    		BTC/EUR <span class="nt">-3.44%</span>
+					    		<br/><span class="wt">13,479.44</span> <span class="gt">EUR</span>
+					    		<br/><span class="t-foot gt">Volume: <span class="wt">4,111</span> BTC</span>
+					    	</div>
+					    	<div class="tick-box">
+					    		LTC/BTC <span class="pt">+2.25%</span>
+					    		<br/><span class="wt">0.02</span> <span class="gt">BTC</span>
+					    		<br/><span class="t-foot gt">Volume: <span class="wt">24,794</span> LTC</span>
+					    	</div>
+					    </div>
+				    </div>
+					<div class="bg-curtain"></div>
+				</div>
+			</div>
+			<div class="footer">
+				<button class="footer-btn glow-btn">Get Early Beta Access!</button>					
+				<i class="fa fa-angle-down down-btn" aria-hidden="true"></i>
+			</div>		
+		</div>
+		<div class="section" id="section1">
+			<div class="main-content fp-table">
+				<div class="fp-tableCell white-text">
+					<div class="wrap">
+						<h3 class="thin" id="scrTxt4">						
+							At heart, we are an agency offering the next level of market intelligence in the field of Cryptocurrency.<br/>
+							Below are the main services we offer.
+						</h3>
+						<div class="service-box sq1">
+							<div class="tron-contain">								
+								<img src="img/eth-gl.png">
+								<svg width='400' height='250' viewBox="0 0 400 250" preserveAspectRatio="xMidYMid meet">
+							      	<filter id="glow">
+									    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+									    <feMerge>
+									        <feMergeNode in="coloredBlur"/>
+									        <feMergeNode in="SourceGraphic"/>
+									    </feMerge>
+									</filter>
+							      	<path filter="url(#glow)" id="graph-line1" 
+								      	d= "M90 40
+								      		L120 10
+								      		L220 10
+								      		L250 30
+								      		L300 30
+								      		L330 10
+								      		L390 10
+								      		L390 100
+								      		L370 100"/>
+								    <path filter="url(#glow)" id="graph-line2" 
+								      	d= "M50 128
+								      		L50 180
+								      		L80 180
+								      		L120 210
+								      		L120 230
+								      		L340 230
+								      		L390 200
+								      		L390 110
+								      		L370 110"/>								
+							    </svg>
+							</div>
+							LEAD GENERATION<br/>
+							<button class="glow-btn">Know More</button>							
+						</div>
+						<div class="service-box sq2">
+							<div class="tron-contain">								
+								<img src="img/btc-gl.png">
+								<svg width='400' height='250' viewBox="0 0 400 250" preserveAspectRatio="xMidYMid meet">
+							      	<filter id="glow2">
+									    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+									    <feMerge>
+									        <feMergeNode in="coloredBlur"/>
+									        <feMergeNode in="SourceGraphic"/>
+									    </feMerge>
+									</filter>
+							      	<path filter="url(#glow2)" id="graph-line3" 
+								      	d= "M50 72
+								      		L50 10
+								      		L170 10
+								      		L170 20
+								      		L200 20
+								      		L200 10
+								      		L230 10
+								      		L230 20
+								      		L260 20
+								      		L260 10
+								      		L340 10
+								      		L380 40
+								      		L380 140
+								      		L370 140
+								      		L370 170
+								      		L380 170
+								      		L380 200
+								      		L370 200
+								      		L370 230"/>
+								  	<path filter="url(#glow2)" id="graph-line4" 
+								      	d= "M50 178
+								      		L50 200
+								      		L100 200
+								      		L100 220
+								      		L80 220
+								      		L80 230
+								      		L140 230
+								      		L140 220
+								      		L170 220
+								      		L170 230
+								      		L360 230
+								      		L360 200"/>
+							    </svg>
+							</div>
+							CRYPTO RESEARCH<br/>
+							<button class="glow-btn">Know More</button>														
+						</div><br/>
+						<div class="service-box sq3">
+							<div class="tron-contain">								
+								<img src="img/dash-gl.png">
+								<svg width='400' height='250' viewBox="0 0 400 250" preserveAspectRatio="xMidYMid meet">
+							      	<filter id="glow3">
+									    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+									    <feMerge>
+									        <feMergeNode in="coloredBlur"/>
+									        <feMergeNode in="SourceGraphic"/>
+									    </feMerge>
+									</filter>
+								  	<path filter="url(#glow3)" id="graph-line5" 
+								      	d= "M35 50
+								      		L10 10
+								      		L150 10
+								      		L140 20
+								      		L180 20
+								      		L190 10
+								      		L230 10
+								      		L230 20
+								      		L300 20
+								      		L310 10
+								      		L350 10
+								      		L350 30
+								      		L390 30
+								      		L390 50
+								      		L370 50
+								      		"/>
+								  	<path filter="url(#glow3)" id="graph-line6" 
+								      	d= "M50 155
+								      		L50 200
+								      		L40 190
+								      		L40 230								      		
+								      		L240 230								      		
+								      		L230 220								      		
+								      		L230 220								      		
+								      		L280 220								      		
+								      		L300 240								      		
+								      		L380 240								      		
+								      		L390 230								      		
+								      		L390 80								      		
+								      		L370 60								      		
+								      		L390 60								      		
+								      		"/>
+							    </svg>
+							</div>
+							CUSTOMER SUPPORT<br/>
+							<button class="glow-btn">Know More</button>							
+						</div>
+						<div class="service-box sq4">
+							<div class="tron-contain">								
+								<img src="img/lite-gl.png">
+								<svg width='400' height='250' viewBox="0 0 400 250" preserveAspectRatio="xMidYMid meet">
+							      	<filter id="glow4">
+									    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+									    <feMerge>
+									        <feMergeNode in="coloredBlur"/>
+									        <feMergeNode in="SourceGraphic"/>
+									    </feMerge>
+									</filter>
+								  	<path filter="url(#glow4)" id="graph-line7" 
+								      	d= "M90 10
+								      		L250 10
+								      		L250 20
+								      		L270 30
+								      		L300 30
+								      		L310 20
+								      		L340 20
+								      		L350 10
+								      		L370 10
+								      		L380 0
+								      		L380 50
+								      		L390 50
+								      		L390 150
+								      		L370 150
+								      		L370 170
+								      		L390 190
+								      		L370 190
+								      		"/>
+								  	<path filter="url(#glow4)" id="graph-line8" 
+								      	d= "M50 100
+								      		L50 150
+								      		L30 170
+								      		L30 230
+								      		L50 210
+								      		L100 210
+								      		L120 230
+								      		L220 230
+								      		L230 220
+								      		L290 220
+								      		L300 230
+								      		L390 230
+								      		L390 200
+								      		L370 200
+								      		"/>
+							    </svg>
+							</div>
+							INNOVATION CELL<br/>
+							<button class="glow-btn">Know More</button>							
+						</div>
+					</div>
+				</div>
+				<div class="page-title">ABOUT</div>
+			</div>
+			<div class="canvas-ctn"></div>
+		</div>
+		<div class="section" id="section2">
+			<div class="main-content fp-table">
+				<div class="fp-tableCell white-text">
+					<div class="wrap">
+						<h3 class="thin" style="font-size:1.5em;">						
+							We are heavily invested in the usage of artifical intelligence and its applications to the crypto analytics platform worldwide.
+							Our market research provides all necessary and relevant, updated information to our customers in real-time!
+							Our primary focus is on areas like:
+						</h3><br/>
+						<h3 style="font-size:1.5em;">						
+							LEAD GENERATION<br/>
+							CRYPTO RESEARCH<br/>
+							INNOVATION CELL<br/>
+							CUSTOMER SUPPORT<br/>
+						</h3>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="canvas-ctn"></div> -->
+			<div class="canvas-ctn globe js-globe">
+				<ul class="globe-list js-list"></ul>
+				<canvas class="globe-canvas js-canvas"></canvas>		
+			</div>
+			<div class="page-title">FEATURES</div>
+		</div>
+		<div class="section" id="section3">
+			<div class="canvas-ctn">
+				<svg viewBox="-350 -250 700 500" class="roadmap-svg">
+					<filter id="rmg">
+					    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+					    <feMerge>
+					        <feMergeNode in="coloredBlur"/>
+					        <feMergeNode in="SourceGraphic"/>
+					    </feMerge>
+					</filter>
+					<filter id="rmg2">
+					    <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+					    <feMerge>
+					        <feMergeNode in="coloredBlur"/>
+					        <feMergeNode in="SourceGraphic"/>
+					    </feMerge>
+					</filter>
+					<path filter="url(#rmg)" class="roadmap" 
+						d="M-300 -1000 
+							L-300 -200
+							L-200 -200 
+							L-120 -120
+							L-120 -20
+							L-20 -20
+							L80 -100
+							L80 -20
+							L160 60
+							L160 160
+							L520 520
+							" />
+					<rect filter="url(#rmg2)" x="-310" y="-210" rx="5" ry="5" width="20" height="20"
+  						style="fill:#00fffa;" />
+					<text x="-330" y="-170">
+						2017/10
+					    <tspan x="-330" dy="12" style="">TPOC, first Numis design</tspan>
+					</text>
+  					<rect filter="url(#rmg2)" x="-210" y="-210" rx="5" ry="5" width="20" height="20"
+  						style="fill:#00fffa;" />
+  					<text x="-180" y="-210">
+						2018/02
+					    <tspan x="-180" dy="12">Website v1.0 launched</tspan>
+					</text>
+  					<rect filter="url(#rmg2)" x="-130" y="-130" rx="5" ry="5" width="20" height="20"
+  						style="fill:#00fffa;" />
+					<text x="-100" y="-125">
+						2018/06
+					    <tspan x="-100" dy="12">1st business case go-live</tspan>
+					</text>
+  					<rect filter="url(#rmg2)" x="-130" y="-30" rx="5" ry="5" width="20" height="20"
+  						style="fill:#00fffa;" />
+					<text x="-240" y="-20">
+						2018/10
+					    <tspan x="-240" dy="12">Numis v1.5 launched</tspan>
+					    <tspan x="-240" dy="12">Dashboard, iOS app, </tspan>
+					    <tspan x="-240" dy="12">Android app go-live</tspan>
+					</text>
+  					<rect filter="url(#rmg2)" x="-30" y="-30" rx="5" ry="5" width="20" height="20"
+  						style="fill:#00fffa;" />
+					<text x="-50" y="10">
+						2018/12
+					    <tspan x="-50" dy="12">v2.0 launched, 15+ Primary</tspan>
+					    <tspan x="-50" dy="12">clients esablished</tspan>
+					</text>
+  					<rect filter="url(#rmg2)" x="70" y="-110" rx="5" ry="5" width="20" height="20"
+  						style="fill:#00fffa;" />
+					<text x="70" y="-145">
+						2019/Q2
+					    <tspan x="70" dy="12">v3.0 initiated</tspan>
+					    <tspan x="70" dy="12">Apps get upgraded</tspan>
+					</text>
+					<rect filter="url(#rmg2)" x="70" y="-30" rx="5" ry="5" width="20" height="20"
+  						style="fill:#00fffa;" />
+					<text x="100" y="-50">
+						2019/Q3
+					    <tspan x="100" dy="12">Numis Foundation 1st</tspan>
+					    <tspan x="100" dy="12">Steering Committee and</tspan>
+					    <tspan x="100" dy="12">Advisory Board formed</tspan>
+					</text>				
+  					<rect filter="url(#rmg2)" x="150" y="50" rx="5" ry="5" width="20" height="20"
+  						style="fill:#00fffa;" />
+					<text x="40" y="60">
+						2019/Q4
+					    <tspan x="40" dy="12">Numis Blockchain,</tspan>
+					    <tspan x="40" dy="12">Numis Wallet Launch</tspan>
+					</text>
+  					<rect filter="url(#rmg2)" x="150" y="150" rx="5" ry="5" width="20" height="20"
+  						style="fill:#00fffa;" />  						
+					<text x="180" y="150">
+						2020/Q2
+					    <tspan x="180" dy="12">Numis Ecosystem Expansion</tspan>
+					</text>
+				</svg>
+			</div>
+			<div class="page-title">ROADMAP</div>
+		</div>
+		<!-- <div class="section" id="section4">
+			<div class="page-title">PARTNERS</div>
+			<div class="canvas-ctn">
+			</div>
+		</div>
+		<div class="section" id="section5">
+			<div class="page-title">SOCIAL MEDIA</div>
+		</div> -->
+	</div>
+  	<script src="https://use.fontawesome.com/535382715f.js" async></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.fullPage.js"></script>
+	<script src="js/TweenMax.min.js"></script>
+	<script src="js/script.js"></script>
+	<!-- <script src="js/nodeAnim.js"></script>
+	-->
+  <script src="js/three.min.js"></script>
+  <script src="js/ThreeOrbitControls.js"></script>
+  <script src="js/THREE.MeshLine.js"></script>
+	<script src="js/script-globe.js"></script>
+
+	<!-- <script src="js/GeometryUtils.js"></script> -->
+	<!-- <script src="js/section1.js"></script> -->
+	<script src="js/ScrambleText.min.js"></script>
+</body>
+</html>
